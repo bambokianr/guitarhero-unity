@@ -6,7 +6,7 @@ using UnityEngine;
 // bpm song -> bps song -> note speed
 public class Note : MonoBehaviour
 {
-  Rigidbody2D rb;
+  private Rigidbody2D rb;
   public float speed;
 
   private void Awake()
@@ -14,13 +14,8 @@ public class Note : MonoBehaviour
     rb = GetComponent<Rigidbody2D>();
   }
 
-  void Start()
+  private void Start()
   {
     rb.velocity = new Vector2(0, -speed);
-  }
-
-  void Update()
-  {
-
   }
 }
